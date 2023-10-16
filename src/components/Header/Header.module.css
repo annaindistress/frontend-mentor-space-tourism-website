@@ -1,0 +1,236 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  color: white;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.button {
+  position: relative;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  font-size: 0;
+  background-color: transparent;
+  background-image: url("/images/icon-hamburger.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 0;
+  cursor: pointer;
+}
+
+.header--open .button {
+  background-image: url("/images/icon-close.svg");
+}
+
+.navigation {
+  position: relative;
+  background-color: var(--color-white-transparent);
+  backdrop-filter: blur(40.774px);
+}
+
+.navigation ul {
+  display: grid;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: navigation-list -1;
+}
+
+.navigation li {
+  font-family: var(--font-fancy-sans);
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+  counter-increment: navigation-list;
+}
+
+.navigation a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: currentColor;
+  outline: none;
+}
+
+.navigation a::before {
+  content: "0"counter(navigation-list);
+  margin-right: 12px;
+  font-weight: 700;
+}
+
+.navigation a::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: white;
+  opacity: 0;
+}
+
+.navigation a:focus::after {
+  opacity: .502;
+}
+
+.navigation a.active::after {
+  opacity: 1;
+}
+
+@media (max-width: 767px) {
+
+  .navigation {
+    position: fixed;
+    inset-block: 0;
+    right: 0;
+    display: none;
+    width: 255px;
+    padding-top: 118px;
+  }
+
+  .header--open .navigation {
+    display: block;
+  }
+
+  .navigation a {
+    padding-inline: 32px;
+  }
+
+  .navigation a::after {
+    top: 50%;
+    right: 0;
+    width: 4px;
+    height: 32px;
+    transform: translateY(-50%);
+  }
+}
+
+@media (min-width: 768px) {
+
+  .header {
+    justify-content: start;
+    padding: 0;
+    padding-left: 40px;
+  }
+
+  .logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .button {
+    display: none;
+  }
+
+  .navigation {
+    flex-grow: 1;
+    margin-left: 31.6%;
+    padding-left: 48px;
+  }
+
+  .navigation ul {
+    grid-template-columns: repeat(4, min-content);
+    gap: 37px;
+  }
+
+  .navigation li {
+    font-size: 14px;
+    letter-spacing: 2.362px;
+  }
+
+  .navigation a {
+    padding-block: 40px;
+  }
+
+  .navigation a::before {
+    display: none;
+  }
+
+  .navigation a::after {
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    transition: all .3s;
+  }
+
+  .navigation a:focus::after,
+  .navigation a.active::after {
+    left: 0;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .header {
+    padding-block: 40px;
+    padding-left: 55px;
+  }
+
+  .navigation {
+    position: relative;
+    margin-left: 36.6%;
+    padding-left: 123px;
+  }
+
+  .navigation::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    display: block;
+    width: 56.8%;
+    height: 1px;
+    background-color: white;
+    opacity: .252;
+    transform: translateX(-100%);
+  }
+
+  .navigation ul {
+    gap: 50px;
+  }
+
+  .navigation li {
+    font-size: 16px;
+    letter-spacing: 2.7px;
+  }
+
+  .navigation a::before {
+    display: inline;
+    margin-right: 9px;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+
+  .logo:hover {
+    outline: none;
+  }
+
+  .navigation a:not(.active):hover::after {
+    opacity: .502;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
+
+  .navigation a:hover::after {
+    left: 0;
+    width: 100%;
+  }
+}

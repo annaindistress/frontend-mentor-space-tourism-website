@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'Bellefair';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/bellefair-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/barlow-condensed-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/barlow-condensed-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/barlow-400.woff2') format('woff2');
+}
+
+:root {
+  --font-fancy-serif: 'Bellefair', 'Georgia', 'Times New Roman', serif;
+  --font-fancy-sans: 'Barlow Condensed', 'Arial', 'Helvetica', sans-serif;
+  --font-basic-sans: 'Barlow', 'Arial', 'Helvetica', sans-serif;
+
+  --color-black: hsl(230, 35%, 7%);
+  --color-blue: hsl(231, 77%, 90%);
+
+  --color-white-transparent: hsla(255, 100%, 100%, .04);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-basic-sans);
+  font-size: 15px;
+  line-height: 1.666;
+  color: var(--color-blue);
+  background-color: var(--color-black);
+}
