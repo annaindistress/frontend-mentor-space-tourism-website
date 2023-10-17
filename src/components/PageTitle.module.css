@@ -1,0 +1,44 @@
+.title {
+  max-width: 690px;
+  margin: 0 auto;
+  font-family: var(--font-fancy-sans);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+}
+
+.number {
+  margin-right: 15px;
+  font-weight: 700;
+  opacity: .25;
+}
+
+@media (min-width: 768px) {
+
+  .title {
+    font-size: 20px;
+    letter-spacing: 3.375px;
+    text-align: left;
+  }
+
+  .number {
+    margin-right: 16px;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .title {
+    max-width: 1110px;
+    font-size: 28px;
+    letter-spacing: 4.725px;
+  }
+
+  .number {
+    margin-right: 25px;
+  }
+}

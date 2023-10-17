@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Main from '../components/UI/Main';
+import Main from '../components/Main';
 import styles from './Home.module.css';
 
 const HomePage = () => (
