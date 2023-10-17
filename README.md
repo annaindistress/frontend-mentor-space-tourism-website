@@ -20,12 +20,24 @@ Users should be able to:
 
 ## Screenshot
 
+![Home page](./screenshot-home.png)
+
 ## Links
 
 - [Solution URL](https://github.com/annaindistress/frontend-mentor-space-tourism-website)
 - [Live Site URL](https://annaindistress.github.io/frontend-mentor-space-tourism-website/)
 
 ## Built with
+
+- Semantic HTML5 markup
+- Mobile-first workflow
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- CSS Modules
+- Vite
+- React
+- React Router
 
 ## Author
 
