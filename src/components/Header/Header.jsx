@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import logo from '../../assets/logo.svg';
 import styles from './Header.module.css';
 
 const links = [
@@ -33,7 +34,7 @@ const Header = () => {
         to="/frontend-mentor-space-tourism-website/"
       >
         <img
-          src="/images/logo.svg"
+          src={logo}
           alt="Space tourism logo"
           width="40"
           height="40"
