@@ -37,8 +37,7 @@
 
   --color-black: hsl(230, 35%, 7%);
   --color-blue: hsl(231, 77%, 90%);
-
-  --color-white-transparent: hsla(255, 100%, 100%, .04);
+  --color-white: 255, 100%, 100%;
 }
 
 *,
@@ -54,4 +53,33 @@ body {
   line-height: 1.666;
   color: var(--color-blue);
   background-color: var(--color-black);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+
+  body {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  body {
+    font-size: 18px;
+    line-height: 1.777;
+  }
 }

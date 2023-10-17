@@ -1,7 +1,7 @@
+import Main from '../components/UI/Main';
+
 const DestinationPage = () => (
-  <>
-    Destination Page
-  </>
+  <Main className="main--destination">Destination Page</Main>
 );
 
 export default DestinationPage;

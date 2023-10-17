@@ -28,7 +28,10 @@ const Header = () => {
     <header
       className={`${styles.header} ${isOpenMenu ? styles['header--open'] : ''}`}
     >
-      <Link className={styles.logo}>
+      <Link
+        className={styles.logo}
+        to="/frontend-mentor-space-tourism-website/"
+      >
         <img
           src="/images/logo.svg"
           alt="Space tourism logo"
