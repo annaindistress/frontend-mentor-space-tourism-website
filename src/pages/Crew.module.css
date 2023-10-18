@@ -1,0 +1,96 @@
+.container {
+  display: grid;
+  align-content: start;
+  flex-grow: 1;
+  width: 100%;
+  max-width: 506px;
+  margin-inline: auto;
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.navigation {
+  display: grid;
+  grid-template-columns: repeat(4, 26px);
+  justify-content: center;
+  order: -2;
+  margin: 0;
+  margin-bottom: 23px;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation a {
+  --opacity: 0.174;
+  --size: 5px;
+
+  display: block;
+  width: 26px;
+  height: 26px;
+  font-size: 0;
+  background-image: radial-gradient(
+    circle at center,
+    hsla(var(--color-white), var(--opacity)) 0,
+    hsla(var(--color-white), var(--opacity)) var(--size),
+    hsla(var(--color-white), 0) var(--size)
+  );
+  background-repeat: no-repeat;
+  outline: none;
+}
+
+.navigation a:focus {
+  --opacity: 0.5;
+}
+
+.navigation a.active {
+  --opacity: 1;
+}
+
+@media (min-width: 768px) {
+
+  .container {
+    padding-block: 60px 0;
+  }
+
+  .navigation {
+    order: 1;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .container {
+    position: relative;
+    max-width: 1110px;
+    padding-top: 154px;
+    padding-inline: 0;
+    text-align: left;
+  }
+
+  .navigation {
+    justify-content: left;
+    margin-bottom: 0;
+  }
+
+  .navigation {
+    grid-template-columns: repeat(4, 39px);
+    justify-content: left;
+    margin-left: -10px;
+    margin-bottom: 0;
+  }
+
+  .navigation a {
+    --size: 8px;
+
+    width: 39px;
+    height: 39px;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+
+  .navigation a:not(.active):hover {
+    --opacity: 0.5;
+  }
+}

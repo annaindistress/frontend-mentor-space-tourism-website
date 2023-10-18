@@ -15,10 +15,10 @@ const DestinationItem = ({ data }) => {
       <picture className={styles.image}>
         <source
           type="image/webp"
-          srcSet={`/frontend-mentor-space-tourism-website/${current.images.webp}`}
+          srcSet={`/frontend-mentor-space-tourism-website${current.images.webp}`}
         />
         <img
-          src={`/frontend-mentor-space-tourism-website/${current.images.png}`}
+          src={`/frontend-mentor-space-tourism-website${current.images.png}`}
           width="170"
           height="170"
           alt={`${current.name}'s image`}

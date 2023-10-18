@@ -6,9 +6,10 @@ import {
 import RootLayout from './pages/Root';
 import HomePage from './pages/Home';
 import DestinationPage from './pages/Destination';
-import CrewPage from './pages/Crew';
-import TechnologyPage from './pages/Technology';
 import DestinationItem from './components/DestinationItem';
+import CrewPage from './pages/Crew';
+import CrewMember from './components/CrewMember';
+import TechnologyPage from './pages/Technology';
 import './styles.css';
 import data from './assets/data.json';
 
@@ -33,7 +34,20 @@ const router = createBrowserRouter(
             },
           ],
         },
-        { path: '/crew', element: <CrewPage /> },
+        {
+          path: '/crew',
+          element: <CrewPage data={data.crew} />,
+          children: [
+            {
+              index: true,
+              element: <Navigate to="/crew/douglas-hurley" replace />,
+            },
+            {
+              path: ':member',
+              element: <CrewMember data={data.crew} />,
+            },
+          ],
+        },
         { path: '/technology', element: <TechnologyPage /> },
       ],
     },
