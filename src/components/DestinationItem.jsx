@@ -7,16 +7,18 @@ const DestinationItem = ({ data }) => {
   const current = data.find(
     item => item.name.toLowerCase() === params.destination
   );
-  console.log(current);
 
   return (
     <>
       <h2 className={styles.title}>{current.name}</h2>
       <p className={styles.description}>{current.description}</p>
       <picture className={styles.image}>
-        <source type="image/webp" srcSet={current.images.webp} />
+        <source
+          type="image/webp"
+          srcSet={`/frontend-mentor-space-tourism-website/${current.images.webp}`}
+        />
         <img
-          src={current.images.png}
+          src={`/frontend-mentor-space-tourism-website/${current.images.png}`}
           width="170"
           height="170"
           alt={`${current.name}'s image`}
