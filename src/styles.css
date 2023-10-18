@@ -36,6 +36,7 @@
   --font-basic-sans: 'Barlow', 'Arial', 'Helvetica', sans-serif;
 
   --color-black: hsl(230, 35%, 7%);
+  --color-gray: hsl(231, 15%, 26%);
   --color-blue: hsl(231, 77%, 90%);
   --color-white: 255, 100%, 100%;
 }

@@ -29,16 +29,8 @@ const Header = () => {
     <header
       className={`${styles.header} ${isOpenMenu ? styles['header--open'] : ''}`}
     >
-      <Link
-        className={styles.logo}
-        to="/frontend-mentor-space-tourism-website/"
-      >
-        <img
-          src={logo}
-          alt="Space tourism logo"
-          width="40"
-          height="40"
-        />
+      <Link className={styles.logo} to="/">
+        <img src={logo} alt="Space tourism logo" width="40" height="40" />
       </Link>
       <button
         className={styles.button}
@@ -53,8 +45,8 @@ const Header = () => {
           {links.map((link, index) => (
             <li key={index}>
               <NavLink
-                to={`/frontend-mentor-space-tourism-website/${link.url}`}
-                end
+                to={`/${link.url}`}
+                end={link.url === ''}
                 className={({ isActive }) => (isActive ? styles.active : '')}
               >
                 {link.title}

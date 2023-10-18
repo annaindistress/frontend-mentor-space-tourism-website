@@ -1,0 +1,102 @@
+.container {
+  display: grid;
+  max-width: 621px;
+  margin-inline: auto;
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.navigation {
+  display: grid;
+  grid-template-columns: repeat(4, min-content);
+  justify-content: center;
+  gap: 25px;
+  margin: 0;
+  margin-bottom: 18px;
+  padding: 0;
+  font-family: var(--font-fancy-sans);
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 2.362px;
+  text-transform: uppercase;
+  list-style: none;
+}
+
+.navigation a {
+  position: relative;
+  display: block;
+  padding-block: 11px;
+  text-decoration: none;
+  color: white;
+}
+
+.navigation a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  display: block;
+  width: 0;
+  height: 3px;
+  background-color: white;
+  opacity: 0;
+  transition: all .3s;
+}
+
+.navigation a:focus::after {
+  opacity: .502;
+}
+
+.navigation a.active::after {
+  opacity: 1;
+}
+
+.navigation a:focus::after,
+.navigation a.active::after {
+  left: 0;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+
+  .container {
+    padding-block: 60px;
+  }
+
+  .navigation {
+    gap: 32px;
+    margin-bottom: 32px;
+    font-size: 16px;
+    letter-spacing: 2.7px;
+  }
+
+  .navigation a {
+    padding-block: 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .container {
+    grid-template-columns: 509px 1fr;
+    gap: 0 158px;
+    max-width: 1110px;
+    padding: 50px 0;
+    text-align: left;
+  }
+
+  .navigation {
+    justify-content: start;
+    gap: 33px;
+    margin-bottom: 28px;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+
+  .navigation a:not(.active):hover::after {
+    left: 0;
+    width: 100%;
+    opacity: .502;
+  }
+}

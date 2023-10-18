@@ -18,7 +18,7 @@ const HomePage = () => (
       </p>
       <Link
         className={styles.link}
-        to="/frontend-mentor-space-tourism-website/destination"
+        to="/destination"
       >
         Explore
       </Link>
