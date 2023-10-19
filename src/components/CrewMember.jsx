@@ -5,7 +5,7 @@ import styles from './CrewMember.module.css';
 const CrewMember = ({ data }) => {
   const params = useParams();
   const current = data.find(
-    item => item.name.toLowerCase().replace(' ', '-') === params.member
+    item => item.name.toLowerCase().replace(' ', '-') === params.crewMember
   );
 
   return (

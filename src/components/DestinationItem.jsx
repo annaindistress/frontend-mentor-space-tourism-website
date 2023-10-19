@@ -5,7 +5,7 @@ import styles from './DestinationItem.module.css';
 const DestinationItem = ({ data }) => {
   const params = useParams();
   const current = data.find(
-    item => item.name.toLowerCase() === params.destination
+    item => item.name.toLowerCase() === params.destinationItem
   );
 
   return (
